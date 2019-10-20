@@ -19,7 +19,13 @@ RUN apt-get update; \
 # You can force a specific version by setting HOMEBRIDGE_VERSION
 # See https://github.com/marcoraddatz/homebridge-docker#homebridge_version
 # -------------------------------------------------------------------------
+
 RUN npm install -g homebridge --unsafe-perm
+RUN npm install -g homebridge-synology
+RUN npm install -g homebridge-mi-aqara
+RUN npm install -g homebridge-yeelight
+RUN npm install -g homebridge-mi-air-purifier miio
+RUN npm install -g homebridge-mi-outlet
 
 # MISC settings
 COPY avahi-daemon.conf /etc/avahi/avahi-daemon.conf
